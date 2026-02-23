@@ -16,7 +16,7 @@ export function SiteHeader() {
         <div className={styles.brand}>
           <Link href="/" className={styles.brandLink}>
             <span className={styles.mark} aria-hidden>
-              ◼
+              <img src="/brand-mark.png" alt="" />
             </span>
             <span className={styles.name}>Ordinis Technologies</span>
           </Link>

@@ -24,7 +24,9 @@ export const metadata: Metadata = {
       'Clinical infrastructure engineered for control, stability, and long-term integrity.',
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: [{ url: '/favicon.png', type: 'image/png' }],
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 };
 
