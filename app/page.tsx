@@ -1,14 +1,23 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Ordinis Technologies | Infrastructure for Clinical Operations',
+  description:
+    'Clinical infrastructure engineered for control, stability, and long-term integrity.',
+  alternates: {
+    canonical: 'https://ordinistechnologies.com/',
+  },
+};
 
 export default function HomePage() {
   return (
     <div className="container">
       <div className="kicker">Ordinis Technologies</div>
-      <h1>Clinical infrastructure. Built to endure.</h1>
+      <h1>Infrastructure for Clinical Operations. Built to Endure.</h1>
       <p className="lede">
-        Ordinis Core Practice is an offline-first medical operations system built on ledger truth and
-        operational discipline—designed for environments where integrity matters more than trend
-        alignment.
+        Ordinis Core Practice is an offline-first clinical operations system grounded in ledger truth
+        and operational discipline for environments where integrity outranks trend alignment.
       </p>
 
       <div className="btnRow">
@@ -16,48 +25,60 @@ export default function HomePage() {
           View Core Practice
         </Link>
         <Link className="btn" href="/architecture">
-          Read the Architecture
+          Review Architecture
         </Link>
       </div>
 
-      <div className="rule" />
+      <section>
+        <h2>Operational posture</h2>
+        <p>
+          Ordinis is designed for organizations that value reliability over novelty. The system
+          emphasizes deterministic workflows, explicit boundaries, and data integrity under routine
+          pressure.
+        </p>
+      </section>
 
-      <div className="grid">
-        <section>
-          <h2>When you&apos;re done with churn.</h2>
-          <p>
-            Modern systems optimize for scale, surface-area, and recurring migrations. Ordinis
-            optimizes for control, clarity, and longevity.
-          </p>
-          <ul className="list">
-            <li>Offline-first workflows with explicit sync boundaries</li>
-            <li>Ledger-based accounting primitives, not UI-driven totals</li>
-            <li>Deterministic data modeling and auditable change history</li>
-            <li>Operational tooling built by an operator, for operators</li>
-          </ul>
-        </section>
+      <section>
+        <h2>Core commitments</h2>
+        <ul className="list">
+          <li>Offline-capable workflows with controlled synchronization boundaries</li>
+          <li>Ledger-native accounting primitives and transparent reconciliation</li>
+          <li>Stable data models engineered for long-term operational continuity</li>
+          <li>Audit-oriented tooling that favors clarity over hidden automation</li>
+        </ul>
+      </section>
 
-        <aside className="card">
-          <h3>Primary pages</h3>
-          <p className="small">
-            The site is structured to read like documentation—quiet, specific, and stable.
-          </p>
-          <ul className="list">
-            <li>
-              <Link href="/core-practice">Core Practice</Link>
-            </li>
-            <li>
-              <Link href="/architecture">Architecture</Link>
-            </li>
-            <li>
-              <Link href="/security">Security</Link>
-            </li>
-            <li>
-              <Link href="/company">Company</Link>
-            </li>
-          </ul>
-        </aside>
-      </div>
+      <section>
+        <h2>Primary pages</h2>
+        <div className="grid">
+          <div>
+            <p className="small">
+              The site reads as institutional documentation: concise, specific, and technically
+              accountable.
+            </p>
+          </div>
+          <aside className="card">
+            <h3>Navigation</h3>
+            <ul className="list">
+              <li>
+                <Link href="/core-practice">Core Practice</Link>
+              </li>
+              <li>
+                <Link href="/architecture">Architecture</Link>
+              </li>
+              <li>
+                <Link href="/security">Security</Link>
+              </li>
+              <li>
+                <Link href="/company">Company</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
     </div>
   );
 }

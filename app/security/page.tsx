@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Security',
-  description: 'Security posture and data ownership principles.',
+  title: 'Security | Ordinis Technologies',
+  description: 'Security posture and data ownership principles for Ordinis systems.',
+  alternates: {
+    canonical: 'https://ordinistechnologies.com/security/',
+  },
 };
 
 export default function SecurityPage() {
@@ -13,26 +16,27 @@ export default function SecurityPage() {
       <div className="kicker">Data & Privacy</div>
       <h1>Security</h1>
       <p className="lede">
-        Ordinis is built with a security posture that favors explicit boundaries, data ownership, and
-        observability over opaque convenience.
+        Ordinis is implemented with a security posture that enforces explicit access boundaries,
+        durable encryption controls, and observable system behavior.
       </p>
 
-      <div className="rule" />
+      <section>
+        <h2>Principles</h2>
+        <ul className="list">
+          <li>Data ownership is contractual and architectural, not marketing language.</li>
+          <li>Encryption at rest is standard for sensitive local and synchronized datasets.</li>
+          <li>Auditability is built directly into high-impact data mutation surfaces.</li>
+          <li>Operational access follows least-privilege expectations and explicit review paths.</li>
+        </ul>
+      </section>
 
-      <h2>Principles</h2>
-      <ul className="list">
-        <li>Data ownership is treated as a requirement, not a slogan.</li>
-        <li>Encryption at rest is assumed for sensitive local datasets.</li>
-        <li>Auditability is designed into change surfaces.</li>
-        <li>No hidden monetization model tied to patient data.</li>
-      </ul>
-
-      <div className="rule" />
-
-      <p className="small">
-        This page is a placeholder scaffold; expand with concrete statements as your implementation
-        details and hosting model are finalized.
-      </p>
+      <section>
+        <h2>Design intent</h2>
+        <p>
+          Security controls are designed to reduce silent drift and preserve trust in the record.
+          Every control decision is evaluated against operational continuity and accountability.
+        </p>
+      </section>
     </div>
   );
 }

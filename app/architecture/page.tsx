@@ -2,9 +2,12 @@ import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Architecture',
+  title: 'Architecture | Ordinis Technologies',
   description:
     'A plain-language description of the design principles behind Ordinis Core Practice.',
+  alternates: {
+    canonical: 'https://ordinistechnologies.com/architecture/',
+  },
 };
 
 export default function ArchitecturePage() {
@@ -21,6 +24,54 @@ export default function ArchitecturePage() {
       </p>
 
       <div className="rule" />
+
+      <section>
+        <h2>System path</h2>
+        <p>
+          The architecture follows a narrow and explicit flow: interface input, ledger
+          interpretation, model normalization, and encrypted persistence.
+        </p>
+        <figure className="diagram">
+          <svg
+            viewBox="0 0 760 140"
+            role="img"
+            aria-label="Architecture flow from user interface to encrypted storage"
+          >
+            <rect x="8" y="46" width="150" height="48" rx="3" fill="#f7f8f9" stroke="#3e4a58" />
+            <text x="83" y="75" textAnchor="middle" fontSize="14" fill="#1f2933">
+              UI
+            </text>
+
+            <line x1="160" y1="70" x2="220" y2="70" stroke="#5d6773" strokeWidth="1.5" />
+            <polygon points="220,70 213,66 213,74" fill="#5d6773" />
+
+            <rect x="228" y="46" width="170" height="48" rx="3" fill="#f7f8f9" stroke="#3e4a58" />
+            <text x="313" y="75" textAnchor="middle" fontSize="14" fill="#1f2933">
+              Ledger Engine
+            </text>
+
+            <line x1="400" y1="70" x2="460" y2="70" stroke="#5d6773" strokeWidth="1.5" />
+            <polygon points="460,70 453,66 453,74" fill="#5d6773" />
+
+            <rect x="468" y="46" width="150" height="48" rx="3" fill="#f7f8f9" stroke="#3e4a58" />
+            <text x="543" y="75" textAnchor="middle" fontSize="14" fill="#1f2933">
+              Data Model
+            </text>
+
+            <line x1="620" y1="70" x2="680" y2="70" stroke="#5d6773" strokeWidth="1.5" />
+            <polygon points="680,70 673,66 673,74" fill="#5d6773" />
+
+            <rect x="688" y="46" width="64" height="48" rx="3" fill="#f7f8f9" stroke="#3e4a58" />
+            <text x="720" y="67" textAnchor="middle" fontSize="13" fill="#1f2933">
+              Encrypted
+            </text>
+            <text x="720" y="84" textAnchor="middle" fontSize="13" fill="#1f2933">
+              Storage
+            </text>
+          </svg>
+          <figcaption>UI -&gt; Ledger Engine -&gt; Data Model -&gt; Encrypted Storage</figcaption>
+        </figure>
+      </section>
 
       <section>
         <h2>1) Ledger truth as a first principle</h2>
@@ -152,10 +203,7 @@ export default function ArchitecturePage() {
           ledger events—then derives the rest.
         </p>
         <pre aria-label="Example: event-first modeling">
-{`// Conceptual example (illustrative)
-// Reports read from events; they do not define truth.
-
-ledger_event {
+{`ledger_event {
   id
   occurred_at
   type: "charge_posted" | "payment_received" | "adjustment_applied" | ...

@@ -4,12 +4,28 @@ import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Ordinis Technologies',
-    template: '%s · Ordinis Technologies',
-  },
+  metadataBase: new URL('https://ordinistechnologies.com'),
+  title: 'Ordinis Technologies | Clinical Infrastructure Built to Endure',
   description:
-    'Clinical infrastructure engineered for control, clarity, and longevity.',
+    'Clinical infrastructure engineered for control, stability, and long-term integrity.',
+  openGraph: {
+    title: 'Ordinis Technologies | Clinical Infrastructure Built to Endure',
+    description:
+      'Clinical infrastructure engineered for control, stability, and long-term integrity.',
+    url: 'https://ordinistechnologies.com/',
+    siteName: 'Ordinis Technologies',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ordinis Technologies | Clinical Infrastructure Built to Endure',
+    description:
+      'Clinical infrastructure engineered for control, stability, and long-term integrity.',
+  },
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

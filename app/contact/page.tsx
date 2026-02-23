@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Contact Ordinis Technologies.',
+  title: 'Contact | Ordinis Technologies',
+  description: 'Contact Ordinis Technologies for implementation and institutional inquiries.',
+  alternates: {
+    canonical: 'https://ordinistechnologies.com/contact/',
+  },
 };
 
 export default function ContactPage() {
@@ -13,21 +16,24 @@ export default function ContactPage() {
       <div className="kicker">Contact</div>
       <h1>Contact</h1>
       <p className="lede">
-        For implementation inquiries or technical discussion, reach out.
+        For implementation inquiries, security coordination, or technical discussion, contact the
+        team directly.
       </p>
 
-      <div className="rule" />
+      <section>
+        <h2>Email</h2>
+        <p>
+          <a href="mailto:hoover.matthew0@gmail.com">hoover.matthew0@gmail.com</a>
+        </p>
+      </section>
 
-      <h2>Email</h2>
-      <p className="small">
-        Add your preferred inbox once configured (e.g., <code>info@ordinistechnologies.com</code>).
-      </p>
-
-      <h2>Notes</h2>
-      <ul className="list">
-        <li>Keep this page simple. No forms unless you explicitly want them.</li>
-        <li>When you add email, consider SPF/DKIM/DMARC before publishing widely.</li>
-      </ul>
+      <section>
+        <h2>Response posture</h2>
+        <p>
+          Communications are handled with a technical-first process suitable for operational and
+          institutional stakeholders.
+        </p>
+      </section>
     </div>
   );
 }
