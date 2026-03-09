@@ -3,6 +3,7 @@ import styles from './siteHeader.module.css';
 
 const nav = [
   { href: '/core-practice', label: 'Core Practice' },
+  { href: '/digital-services', label: 'Digital Services' },
   { href: '/architecture', label: 'Architecture' },
   { href: '/security', label: 'Security' },
   { href: '/company', label: 'Company' },

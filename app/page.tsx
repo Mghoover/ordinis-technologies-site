@@ -64,6 +64,9 @@ export default function HomePage() {
                 <Link href="/core-practice">Core Practice</Link>
               </li>
               <li>
+                <Link href="/digital-services">Digital Services</Link>
+              </li>
+              <li>
                 <Link href="/architecture">Architecture</Link>
               </li>
               <li>
@@ -77,6 +80,22 @@ export default function HomePage() {
               </li>
             </ul>
           </aside>
+        </div>
+      </section>
+
+      <section>
+        <h2>Digital Services</h2>
+        <p>
+          Search-optimized websites engineered for medical practices that need measurable visibility,
+          trustworthy performance, and long-term maintainability.
+        </p>
+        <div className="btnRow">
+          <Link className="btn btnPrimary" href="/digital-services">
+            Explore Digital Services
+          </Link>
+          <Link className="btn" href="/contact">
+            Talk with Ordinis
+          </Link>
         </div>
       </section>
     </div>
