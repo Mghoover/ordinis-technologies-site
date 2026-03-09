@@ -69,6 +69,22 @@ export default function DigitalServicesPage() {
       </section>
 
       <section>
+        <h2>Case Study</h2>
+        <p>
+          See how Ordinis rebuilt a medical group website for stronger search visibility, faster
+          performance, and cleaner operational publishing.
+        </p>
+        <div className="btnRow">
+          <Link
+            className="btn btnPrimary"
+            href="/digital-services/case-study-integrative-health-solutions"
+          >
+            Read Integrative Health Solutions case study
+          </Link>
+        </div>
+      </section>
+
+      <section>
         <h2>Contact Ordinis</h2>
         <p>
           If your practice needs a technically sound website platform with durable search visibility,
