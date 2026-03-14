@@ -4,7 +4,8 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Digital Services | Ordinis Technologies',
-  description: 'Search-optimized websites engineered for medical practices.',
+  description:
+    'Search-optimized websites engineered for businesses that need measurable visibility, trustworthy performance, and long-term maintainability.',
   alternates: {
     canonical: 'https://ordinistechnologies.com/digital-services/',
   },
@@ -16,63 +17,83 @@ export default function DigitalServicesPage() {
       <Breadcrumbs items={[{ href: '/', label: 'Home' }, { label: 'Digital Services' }]} />
 
       <div className="kicker">Digital Services</div>
-      <h1>Search-optimized websites for medical practices.</h1>
+      <h1>
+        Search-optimized websites engineered for businesses that need measurable visibility,
+        trustworthy performance, and long-term maintainability.
+      </h1>
       <p className="lede">
-        Ordinis builds high-trust web platforms for healthcare organizations that need discoverable
-        patient access without sacrificing technical control, performance, or operational clarity.
+        Ordinis builds high-trust web platforms for organizations that need a modern, reliable web
+        presence without sacrificing technical control, performance, or operational clarity.
       </p>
 
       <section>
-        <h2>What Digital Services means at Ordinis</h2>
+        <h2>Who This Is For</h2>
         <p>
-          Digital Services is our website engineering practice for clinics, specialty groups, and
-          healthcare operators. We design and build fast, search-optimized web properties that align
-          with how medical organizations actually operate.
+          Ordinis Digital Services supports organizations that need a modern, reliable web presence
+          without agency complexity.
         </p>
+        <ul className="list">
+          <li>Local retail businesses</li>
+          <li>Restaurants and cafes</li>
+          <li>Professional services</li>
+          <li>Medical and wellness practices</li>
+          <li>Specialty boutiques and vendors</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What We Build</h2>
+        <p>
+          Digital Services focuses on durable business websites that can be maintained over time and
+          measured against real operating needs.
+        </p>
+        <ul className="list">
+          <li>Search-optimized business websites</li>
+          <li>Modern redesigns of outdated sites</li>
+          <li>Landing pages for new businesses</li>
+          <li>Hosting and long-term maintenance</li>
+          <li>Performance and reliability optimization</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Why technical architecture matters</h2>
+        <p>
+          Business websites are operational systems, not brochure pages. They need to present
+          services clearly, support local discoverability, load quickly, and remain maintainable as
+          the business changes.
+        </p>
+        <div className="callout">
+          <p className="small">
+            Ranking performance and long-term usability depend on disciplined structure: page
+            speed, crawl paths, clean templates, and publishing patterns that do not decay over
+            time.
+          </p>
+        </div>
         <ul className="list">
           <li>Technical SEO foundations built into architecture, not added after launch</li>
           <li>Performance-focused frontend delivery for strong Core Web Vitals outcomes</li>
-          <li>Clear information architecture for services, providers, and patient pathways</li>
+          <li>Clear information architecture for services, locations, and lead pathways</li>
           <li>Operationally maintainable publishing flows for internal teams</li>
         </ul>
       </section>
 
       <section>
-        <h2>Why medical websites require technical architecture</h2>
+        <h2>Local First</h2>
         <p>
-          Medical websites are operational systems, not brochure pages. They must present regulated
-          service information accurately, support location and provider discoverability, and remain
-          usable during high-intent patient journeys.
+          Ordinis Technologies operates from Florence, South Carolina and works directly with
+          regional businesses that want reliable technology without relying on large agencies. Many
+          projects begin as demonstration builds so owners can evaluate the concept before
+          committing.
         </p>
-        <div className="callout">
-          <p className="small">
-            In healthcare, content quality and ranking performance depend on disciplined structure:
-            schema, crawl paths, page speed, and clean indexable templates.
-          </p>
-        </div>
-        <ul className="list">
-          <li>Structured service content and taxonomy that search engines can interpret</li>
-          <li>Consistent technical templates to avoid index fragmentation over time</li>
-          <li>Architecture that supports multi-location and multi-specialty growth</li>
-          <li>Reliable analytics surfaces for measuring lead quality and intent</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Ideal clients</h2>
-        <ul className="list">
-          <li>Independent practices modernizing an outdated or underperforming website</li>
-          <li>Specialty groups scaling to multiple providers and service lines</li>
-          <li>Healthcare operators requiring stronger local search discoverability</li>
-          <li>Teams that want engineering-grade execution, not template-based marketing builds</li>
-        </ul>
       </section>
 
       <section>
         <h2>Case Study</h2>
         <p>
-          See how Ordinis rebuilt a medical group website for stronger search visibility, faster
-          performance, and cleaner operational publishing.
+          Healthcare remains a specialty area within Digital Services. See how Ordinis rebuilt a
+          medical group website for stronger search visibility, faster performance, and cleaner
+          operational publishing.
         </p>
         <div className="btnRow">
           <Link
@@ -87,8 +108,8 @@ export default function DigitalServicesPage() {
       <section>
         <h2>Contact Ordinis</h2>
         <p>
-          If your practice needs a technically sound website platform with durable search visibility,
-          we can scope the architecture and delivery plan.
+          If your organization needs a technically sound website platform with durable search
+          visibility, we can scope the architecture and delivery plan.
         </p>
         <div className="btnRow">
           <Link className="btn btnPrimary" href="/contact">
@@ -99,6 +120,11 @@ export default function DigitalServicesPage() {
           </Link>
         </div>
       </section>
+
+      <p className="small">
+        Healthcare and clinical practices remain a specialty area due to Ordinis&apos;s work
+        developing clinical operations infrastructure.
+      </p>
     </div>
   );
 }

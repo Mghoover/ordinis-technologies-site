@@ -86,7 +86,7 @@ export default function HomePage() {
       <section>
         <h2>Digital Services</h2>
         <p>
-          Search-optimized websites engineered for medical practices that need measurable visibility,
+          Search-optimized websites engineered for businesses that need measurable visibility,
           trustworthy performance, and long-term maintainability.
         </p>
         <div className="btnRow">
