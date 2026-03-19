@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './siteHeader.module.css';
+import { siteConfig } from '@/lib/site';
 
 const nav = [
   { href: '/core-practice', label: 'Core Practice' },
@@ -22,13 +23,23 @@ export function SiteHeader() {
             <span className={styles.name}>Ordinis Technologies</span>
           </Link>
         </div>
-        <nav className={styles.nav} aria-label="Primary">
-          {nav.map((item) => (
-            <Link key={item.href} href={item.href} className={styles.navLink}>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <div className={styles.right}>
+          <div className={styles.contactLine}>
+            <span>{siteConfig.shortLocation}</span>
+            <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
+            <a href={siteConfig.emailHref}>{siteConfig.email}</a>
+          </div>
+          <nav className={styles.nav} aria-label="Primary">
+            {nav.map((item) => (
+              <Link key={item.href} href={item.href} className={styles.navLink}>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+        <Link className={styles.cta} href="/contact">
+          Request a Demo
+        </Link>
       </div>
     </header>
   );

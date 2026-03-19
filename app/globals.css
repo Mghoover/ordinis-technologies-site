@@ -151,6 +151,20 @@ p {
   background: #f8f9fa;
 }
 
+.featureGrid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 24px;
+}
+
+.featureCard {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 22px;
+  background: #f8f9fa;
+}
+
 .list {
   margin: 14px 0 0;
   padding-left: 20px;
@@ -167,6 +181,79 @@ p {
   background: #f4f7fa;
   border-radius: var(--radius);
   margin-top: 18px;
+}
+
+.ctaPanel {
+  margin-top: var(--section-space);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  padding: 28px;
+  background: linear-gradient(180deg, #f4f7fa 0%, #eef3f8 100%);
+}
+
+.contactDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 18px 0 0;
+}
+
+.contactDetails a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.intakeForm {
+  margin-top: 24px;
+}
+
+.formGrid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: var(--text);
+  font-weight: 560;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: #ffffff;
+  color: var(--text);
+  padding: 12px 14px;
+  font: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #7b8794;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-color: var(--focus);
+}
+
+.visuallyHidden {
+  position: absolute;
+  left: -9999px;
 }
 
 code {
@@ -267,6 +354,12 @@ pre {
   border-top: 1px solid var(--rule);
 }
 
+.container > .ctaPanel + section,
+.container > section + .ctaPanel {
+  padding-top: 0;
+  border-top: none;
+}
+
 .diagram {
   margin-top: 24px;
   border: 1px solid var(--rule);
@@ -316,5 +409,9 @@ pre {
   .container > section + section {
     margin-top: 44px;
     padding-top: 44px;
+  }
+
+  .ctaPanel {
+    padding: 24px 20px;
   }
 }

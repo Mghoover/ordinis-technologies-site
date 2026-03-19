@@ -1,42 +1,70 @@
 import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { ContactCta } from '@/components/ContactCta';
+import { buildPageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Security | Ordinis Technologies',
-  description: 'Security posture and data ownership principles for Ordinis systems.',
-  alternates: {
-    canonical: 'https://ordinistechnologies.com/security/',
-  },
-};
+export const metadata: Metadata = buildPageMetadata({
+  title: 'HIPAA-Conscious Security | Ordinis Technologies',
+  description:
+    'Security-focused website and healthcare software infrastructure with clear controls and accountability. Talk with Ordinis today.',
+  path: '/security/',
+  keywords: [
+    'HIPAA-conscious infrastructure',
+    'healthcare software security',
+    'secure website hosting Florence SC',
+    'data protection and access control',
+    'Ordinis Technologies security',
+  ],
+});
 
 export default function SecurityPage() {
   return (
     <div className="container">
       <Breadcrumbs items={[{ href: '/', label: 'Home' }, { label: 'Security' }]} />
-      <div className="kicker">Data & Privacy</div>
-      <h1>Security</h1>
+      <div className="kicker">Security</div>
+      <h1>Security is built into the system, not added after the fact.</h1>
       <p className="lede">
-        Ordinis is implemented with a security posture that enforces explicit access boundaries,
-        durable encryption controls, and observable system behavior.
+        Ordinis approaches security with clear boundaries, controlled access, and infrastructure
+        decisions that respect operational risk. For healthcare software especially, that means
+        building with accountability and data protection from the start.
       </p>
 
       <section>
-        <h2>Principles</h2>
+        <h2>Security posture</h2>
         <ul className="list">
-          <li>Data ownership is contractual and architectural, not marketing language.</li>
-          <li>Encryption at rest is standard for sensitive local and synchronized datasets.</li>
-          <li>Auditability is built directly into high-impact data mutation surfaces.</li>
-          <li>Operational access follows least-privilege expectations and explicit review paths.</li>
+          <li>Least-privilege access and role-aware permissions</li>
+          <li>Encryption controls for sensitive data at rest and in transit</li>
+          <li>Observable system activity for high-impact data changes</li>
+          <li>Deployment and infrastructure practices that reduce unnecessary exposure</li>
         </ul>
       </section>
 
       <section>
-        <h2>Design intent</h2>
+        <h2>HIPAA-conscious by design</h2>
         <p>
-          Security controls are designed to reduce silent drift and preserve trust in the record.
-          Every control decision is evaluated against operational continuity and accountability.
+          Not every project has the same compliance requirements, but healthcare systems need a
+          higher standard of discipline. We design with that in mind by limiting access surfaces,
+          keeping responsibilities explicit, and treating patient-related data with appropriate care.
         </p>
       </section>
+
+      <section>
+        <h2>Why this matters</h2>
+        <p>
+          Security failures usually start with avoidable ambiguity: too many tools, unclear access
+          rules, or infrastructure that was never designed for sensitive workflows. Strong security
+          posture reduces those weaknesses before they become operational problems.
+        </p>
+      </section>
+
+      <ContactCta
+        title="Need a secure foundation for your site or software?"
+        description="We can review your current risk posture and show you a cleaner architecture for hosting, access control, and protected workflows."
+        primaryHref="/contact"
+        primaryLabel="Start the Conversation"
+        secondaryHref="/contact"
+        secondaryLabel="Request a Demo"
+      />
     </div>
   );
 }

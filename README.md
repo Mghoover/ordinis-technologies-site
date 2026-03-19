@@ -1,15 +1,18 @@
-# Ordinis Technologies Marketing Site (Multi-page)
-
-A quiet, institutional marketing site built as a **site**, not a single long scroll.
+# Ordinis Technologies Website
 
 ## What’s in here
 
 - Next.js (App Router) + TypeScript
-- Minimal CSS (no Tailwind, no animations, no “SaaS hype”)
+- Lightweight CSS with reusable sections for services, SEO, and conversion
 - Pages:
   - `/` (Home)
   - `/core-practice`
-  - `/architecture` (drafted in full)
+  - `/practice-management-software`
+  - `/chiropractic-software`
+  - `/florence-sc-web-design`
+  - `/digital-services`
+  - `/digital-services/case-study-integrative-health-solutions`
+  - `/architecture`
   - `/security`
   - `/company`
   - `/contact`
@@ -34,5 +37,7 @@ npm run start
 
 ## Notes
 
-- Replace the placeholder contact email once you’ve set up your domain inbox.
-- The design is intentionally restrained. If you add visuals later, keep them structural (grids, rules, diagrams), not “marketing gradients.”
+- Primary contact:
+  - Phone: `854-204-7395`
+  - Email: `info@ordinistechnologies.com`
+- The site is optimized for Florence, South Carolina web design and healthcare software discovery.

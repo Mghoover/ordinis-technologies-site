@@ -1,16 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { ContactCta } from '@/components/ContactCta';
+import { buildPageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Integrative Health Solutions Case Study | Ordinis Technologies',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Healthcare Website Case Study | Ordinis',
   description:
-    'How Ordinis delivered a search-optimized, performance-focused website platform for Integrative Health Solutions.',
-  alternates: {
-    canonical:
-      'https://ordinistechnologies.com/digital-services/case-study-integrative-health-solutions/',
-  },
-};
+    'See how Ordinis improved healthcare website speed, structure, and conversion paths. Review the case study and request a demo.',
+  path: '/digital-services/case-study-integrative-health-solutions/',
+  keywords: [
+    'healthcare website case study',
+    'medical website redesign',
+    'SEO case study for clinic website',
+    'website performance optimization',
+    'Ordinis Technologies case study',
+  ],
+});
 
 export default function IntegrativeHealthSolutionsCaseStudyPage() {
   return (
@@ -26,82 +32,73 @@ export default function IntegrativeHealthSolutionsCaseStudyPage() {
       <div className="kicker">Case Study</div>
       <h1>Integrative Health Solutions</h1>
       <p className="lede">
-        Integrative Health Solutions partnered with Ordinis to replace a slow, fragmented clinic
-        website with a technically disciplined platform engineered for patient discoverability and
-        operational clarity.
+        Integrative Health Solutions needed a website that loaded faster, ranked better, and gave
+        patients a clearer path to take action. Ordinis rebuilt the platform around cleaner page
+        structure, stronger technical SEO, and conversion-focused content.
       </p>
 
       <section>
-        <h2>Problem</h2>
+        <h2>The challenge</h2>
         <p>
-          The clinic&apos;s previous site had weak local search performance, inconsistent service page
-          templates, and poor mobile speed. High-intent visitors were dropping before booking because
-          key provider and treatment information was hard to locate and difficult to trust.
+          The previous site made it difficult for patients to find services, trust the information,
+          and move toward booking. Page speed was weak, structure was inconsistent, and important
+          service content lacked the clarity needed for both search engines and visitors.
         </p>
         <ul className="list">
-          <li>Service pages were not consistently structured for search interpretation</li>
-          <li>Provider and location data appeared in multiple formats across the site</li>
-          <li>Load times degraded user experience on mobile networks</li>
-          <li>Publishing updates required manual work across disconnected page layouts</li>
+          <li>Important service pages were not consistently structured</li>
+          <li>Mobile performance was hurting user experience</li>
+          <li>Publishing updates required too much manual cleanup</li>
+          <li>Conversion paths were unclear across key pages</li>
         </ul>
       </section>
 
       <section>
-        <h2>Solution</h2>
+        <h2>The solution</h2>
         <p>
-          Ordinis delivered a new website architecture centered on indexable service templates, clear
-          location and provider pathways, and a maintainable content model for internal operations.
+          Ordinis delivered a cleaner website system with reusable page patterns, faster rendering,
+          and stronger information hierarchy. The result was a site that became easier to maintain
+          internally while also improving how patients discovered and navigated services.
         </p>
-        <ul className="list">
-          <li>Template-driven service pages aligned to a durable taxonomy</li>
-          <li>Unified provider and clinic location structures for consistency</li>
-          <li>Performance-optimized frontend rendering and asset delivery</li>
-          <li>Editorial workflows designed for repeatable, low-friction updates</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Technical approach</h2>
-        <p>
-          The project emphasized long-term technical posture over short-term visual churn. We built
-          stable page primitives that support ongoing SEO, accurate content governance, and scalable
-          growth as the clinic expands services.
-        </p>
-        <div className="callout">
-          <p className="small">
-            Strategy and implementation were treated as one system: crawlable structure, fast
-            delivery, and operationally reliable publishing.
-          </p>
+        <div className="featureGrid">
+          <div className="featureCard">
+            <h3>Technical SEO cleanup</h3>
+            <p>Service pages, metadata, and internal links were aligned for stronger search visibility.</p>
+          </div>
+          <div className="featureCard">
+            <h3>Faster performance</h3>
+            <p>Front-end delivery and asset handling were improved to support better mobile usability.</p>
+          </div>
+          <div className="featureCard">
+            <h3>Clearer conversion flow</h3>
+            <p>Patients could move from discovery to contact without fighting the page structure.</p>
+          </div>
         </div>
-        <ul className="list">
-          <li>Semantic page composition with predictable heading and metadata hierarchy</li>
-          <li>Structured data support for medical services, providers, and business entities</li>
-          <li>Route and template patterns designed for clean static export deployment</li>
-          <li>Analytics instrumentation mapped to patient-intent actions</li>
-        </ul>
       </section>
 
       <section>
-        <h2>Result summary</h2>
+        <h2>The outcome</h2>
         <p>
-          Integrative Health Solutions now operates on a website platform that is faster, easier to
-          maintain, and better aligned with how prospective patients search for care.
+          The clinic finished with a stronger digital foundation: a website that was easier to grow,
+          easier to trust, and better aligned with how real patients search for care.
         </p>
-        <ul className="list">
-          <li>Improved technical SEO posture across service and location pages</li>
-          <li>Higher mobile usability through stronger page performance</li>
-          <li>Clearer patient pathways from search discovery to contact conversion</li>
-          <li>Reduced operational overhead for ongoing content and service updates</li>
-        </ul>
         <div className="btnRow">
-          <Link className="btn btnPrimary" href="/contact">
-            Discuss your website
-          </Link>
           <Link className="btn" href="/digital-services">
             Back to Digital Services
           </Link>
+          <Link className="btn" href="/florence-sc-web-design">
+            Read more about Florence web design
+          </Link>
         </div>
       </section>
+
+      <ContactCta
+        title="Need a website overhaul that improves performance and leads?"
+        description="We can show you what a better site structure looks like before you commit to a full project."
+        primaryHref="/contact"
+        primaryLabel="Request a Demo"
+        secondaryHref="/contact"
+        secondaryLabel="Discuss Your Website"
+      />
     </div>
   );
 }

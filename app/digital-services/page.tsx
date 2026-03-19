@@ -1,15 +1,23 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { ContactCta } from '@/components/ContactCta';
+import { buildPageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Digital Services | Ordinis Technologies',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Web Design Florence SC | Ordinis Technologies',
   description:
-    'Search-optimized websites engineered for businesses that need measurable visibility, trustworthy performance, and long-term maintainability.',
-  alternates: {
-    canonical: 'https://ordinistechnologies.com/digital-services/',
-  },
-};
+    'Professional website design in Florence, SC. Fast, modern, and built to convert. Get your custom demo site today.',
+  path: '/digital-services/',
+  keywords: [
+    'web design Florence SC',
+    'website design Florence South Carolina',
+    'SEO services Florence SC',
+    'business websites Florence SC',
+    'hosting and website maintenance Florence SC',
+    'Ordinis Technologies digital services',
+  ],
+});
 
 export default function DigitalServicesPage() {
   return (
@@ -17,114 +25,88 @@ export default function DigitalServicesPage() {
       <Breadcrumbs items={[{ href: '/', label: 'Home' }, { label: 'Digital Services' }]} />
 
       <div className="kicker">Digital Services</div>
-      <h1>
-        Search-optimized websites engineered for businesses that need measurable visibility,
-        trustworthy performance, and long-term maintainability.
-      </h1>
+      <h1>High-performance websites for businesses that need more calls, leads, and trust.</h1>
       <p className="lede">
-        Ordinis builds high-trust web platforms for organizations that need a modern, reliable web
-        presence without sacrificing technical control, performance, or operational clarity.
+        Ordinis Technologies designs and builds websites for businesses in Florence, South Carolina
+        and surrounding areas. Every site is structured to load fast, rank locally, and move
+        visitors toward a clear next step.
       </p>
 
       <section>
-        <h2>Who This Is For</h2>
+        <h2>What we deliver</h2>
+        <div className="featureGrid">
+          <div className="featureCard">
+            <h3>Custom website design</h3>
+            <p>
+              We build clean, modern sites around your services, audience, and sales goals instead
+              of squeezing your business into a generic template.
+            </p>
+          </div>
+          <div className="featureCard">
+            <h3>Technical SEO foundations</h3>
+            <p>
+              Metadata, page structure, internal linking, and crawlable service pages are built in
+              from the start.
+            </p>
+          </div>
+          <div className="featureCard">
+            <h3>Hosting and maintenance</h3>
+            <p>
+              We keep your site fast, secure, updated, and operational so it continues performing
+              after launch.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Built for local businesses in Florence, SC</h2>
         <p>
-          Ordinis Digital Services supports organizations that need a modern, reliable web presence
-          without agency complexity.
+          Restaurants, medical offices, contractors, service companies, and professional firms all
+          need the same thing from their website: clarity, speed, and conversion. We focus on the
+          pages that matter most so your site does real business, not just fill space online.
         </p>
         <ul className="list">
-          <li>Local retail businesses</li>
-          <li>Restaurants and cafes</li>
-          <li>Professional services</li>
-          <li>Medical and wellness practices</li>
-          <li>Specialty boutiques and vendors</li>
+          <li>Service pages that explain what you do and why customers should choose you</li>
+          <li>Location-aware SEO for Florence, SC search intent</li>
+          <li>Calls to action built around phone calls, forms, bookings, or demo requests</li>
+          <li>Site structure that can scale as your business adds services or locations</li>
         </ul>
       </section>
 
       <section>
-        <h2>What We Build</h2>
+        <h2>Our process is simple</h2>
         <p>
-          Digital Services focuses on durable business websites that can be maintained over time and
-          measured against real operating needs.
-        </p>
-        <ul className="list">
-          <li>Search-optimized business websites</li>
-          <li>Modern redesigns of outdated sites</li>
-          <li>Landing pages for new businesses</li>
-          <li>Hosting and long-term maintenance</li>
-          <li>Performance and reliability optimization</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Why technical architecture matters</h2>
-        <p>
-          Business websites are operational systems, not brochure pages. They need to present
-          services clearly, support local discoverability, load quickly, and remain maintainable as
-          the business changes.
+          We start by understanding what customers need to know before they call you. Then we build
+          the pages, content, and technical foundation required to make that path obvious.
         </p>
         <div className="callout">
           <p className="small">
-            Ranking performance and long-term usability depend on disciplined structure: page
-            speed, crawl paths, clean templates, and publishing patterns that do not decay over
-            time.
+            Many projects start with a live demo build so you can see the direction before making a
+            larger commitment.
           </p>
         </div>
-        <ul className="list">
-          <li>Technical SEO foundations built into architecture, not added after launch</li>
-          <li>Performance-focused frontend delivery for strong Core Web Vitals outcomes</li>
-          <li>Clear information architecture for services, locations, and lead pathways</li>
-          <li>Operationally maintainable publishing flows for internal teams</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Local First</h2>
-        <p>
-          Ordinis Technologies operates from Florence, South Carolina and works directly with
-          regional businesses that want reliable technology without relying on large agencies. Many
-          projects begin as demonstration builds so owners can evaluate the concept before
-          committing.
-        </p>
-      </section>
-
-      <section>
-        <h2>Case Study</h2>
-        <p>
-          Healthcare remains a specialty area within Digital Services. See how Ordinis rebuilt a
-          medical group website for stronger search visibility, faster performance, and cleaner
-          operational publishing.
-        </p>
         <div className="btnRow">
+          <Link className="btn" href="/florence-sc-web-design">
+            Read the Florence web design overview
+          </Link>
           <Link
-            className="btn btnPrimary"
+            className="btn"
             href="/digital-services/case-study-integrative-health-solutions"
           >
-            Read Integrative Health Solutions case study
+            View a healthcare website case study
           </Link>
         </div>
       </section>
 
-      <section>
-        <h2>Contact Ordinis</h2>
-        <p>
-          If your organization needs a technically sound website platform with durable search
-          visibility, we can scope the architecture and delivery plan.
-        </p>
-        <div className="btnRow">
-          <Link className="btn btnPrimary" href="/contact">
-            Request a consultation
-          </Link>
-          <Link className="btn" href="/architecture">
-            Review architecture posture
-          </Link>
-        </div>
-      </section>
-
-      <p className="small">
-        Healthcare and clinical practices remain a specialty area due to Ordinis&apos;s work
-        developing clinical operations infrastructure.
-      </p>
+      <ContactCta
+        title="See your next website before you buy it"
+        description="Request a custom demo site and review the structure, design direction, and local SEO approach before moving forward."
+        primaryHref="/contact"
+        primaryLabel="Request a Demo"
+        secondaryHref="/contact"
+        secondaryLabel="Talk to Ordinis"
+      />
     </div>
   );
 }

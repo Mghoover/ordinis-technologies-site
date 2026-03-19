@@ -2,32 +2,35 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
+import { geoMeta, sharedKeywords, siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ordinistechnologies.com'),
-  title: 'Ordinis Technologies | Clinical Infrastructure Built to Endure',
+  metadataBase: new URL(siteConfig.url),
+  title: 'Ordinis Technologies | Florence SC Technology',
   description:
-    'Clinical infrastructure engineered for control, stability, and long-term integrity.',
+    'Custom websites and practice management software built in Florence, South Carolina.',
+  keywords: sharedKeywords,
   openGraph: {
-    title: 'Ordinis Technologies | Clinical Infrastructure Built to Endure',
+    title: 'Ordinis Technologies | Florence SC Technology',
     description:
-      'Clinical infrastructure engineered for control, stability, and long-term integrity.',
-    url: 'https://ordinistechnologies.com/',
-    siteName: 'Ordinis Technologies',
+      'Custom websites and practice management software built in Florence, South Carolina.',
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ordinis Technologies | Clinical Infrastructure Built to Endure',
+    title: 'Ordinis Technologies | Florence SC Technology',
     description:
-      'Clinical infrastructure engineered for control, stability, and long-term integrity.',
+      'Custom websites and practice management software built in Florence, South Carolina.',
   },
   icons: {
     icon: [{ url: '/favicon.png', type: 'image/png' }],
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
+  other: geoMeta,
 };
 
 export default function RootLayout({
