@@ -90,12 +90,9 @@ export default function DigitalServicesPage() {
           <Link className="btn" href="/florence-sc-web-design">
             Read the Florence web design overview
           </Link>
-          <Link
-            className="btn"
-            href="/digital-services/case-study-integrative-health-solutions"
-          >
-            View a healthcare website case study
-          </Link>
+          <a className="btn" href="https://www.bestflorencechiropractor.com/" target="_blank" rel="noopener noreferrer" aria-label="View live IHS website (opens in a new tab)">
+            View the live IHS website <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
 

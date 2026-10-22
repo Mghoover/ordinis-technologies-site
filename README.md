@@ -39,5 +39,5 @@ npm run start
 
 - Primary contact:
   - Phone: `854-204-7395`
-  - Email: `info@ordinistechnologies.com`
+  - Email: `matt@ordinistechnologies.com`
 - The site is optimized for Florence, South Carolina web design and healthcare software discovery.

@@ -25,9 +25,7 @@ export default function ContactPage() {
       <div className="kicker">Contact</div>
       <h1>Request a demo or start a project.</h1>
       <p className="lede">
-        Use the intake form below to tell us what you need, what is not working, and what outcome
-        matters most. Ordinis Technologies reviews website, hosting, automation, and healthcare
-        software requests from Florence, South Carolina and beyond.
+        Tell us what you want to improve. You can reach Matt directly or share a few project details below. We work with businesses and healthcare teams in Florence, South Carolina and beyond.
       </p>
 
       <section>
@@ -51,9 +49,7 @@ export default function ContactPage() {
       <section>
         <h2>What to expect</h2>
         <p>
-          Strong intake helps us respond with something useful instead of a generic reply. Share
-          enough detail for us to understand the business context, the technical problem, and the
-          next step you want to take.
+          We will review your project details and follow up to discuss your priorities, current setup, and what a useful next step could look like.
         </p>
         <p>
           We can review website goals, lead-generation priorities, current infrastructure, or

@@ -415,3 +415,65 @@ pre {
     padding: 24px 20px;
   }
 }
+
+/* Shared presentation and responsive homepage */
+:root { --bg: #f7f8f5; --panel: #fff; --text: #142831; --muted: #53636a; --rule: #dce3df; --rule-strong: #bccbc6; --accent: #1c5557; --accent-2: #113d40; --focus: #075e77; --radius: 5px; --shell-max: 1168px; --content-max: 1168px; --section-space: 56px; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { font-family: "Avenir Next", "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+.shell { background: var(--bg); }
+.content { padding: 32px 24px 72px; }
+.container { max-width: 920px; margin: auto; padding: 48px; border: 1px solid var(--rule); background: white; }
+h1 { font-size: clamp(36px, 4.5vw, 52px); font-weight: 650; line-height: 1.1; letter-spacing: -.045em; text-wrap: balance; }
+h2 { font-size: clamp(29px, 3vw, 38px); line-height: 1.18; font-weight: 620; letter-spacing: -.035em; text-wrap: balance; }
+h3 { font-size: 23px; font-weight: 620; }
+p { color: var(--muted); }
+.kicker { font-weight: 650; letter-spacing: .12em; font-size: 11px; }
+.lede { font-size: 18px; max-width: 57ch; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+.skip { z-index: 100; }
+.skip:focus { position: fixed; }
+.btn { justify-content: center; padding: 13px 19px; min-height: 48px; font: inherit; font-weight: 600; cursor: pointer; gap: 22px; background: transparent; }
+.btnPrimary { background: var(--accent); color: white; }
+.textLink { display: inline-flex; align-items: center; gap: 18px; font-size: 14px; font-weight: 650; color: var(--accent); }
+.homeHero { background: #142831; color: #f5f9f7; padding: 68px 52px; display: grid; grid-template-columns: 1.65fr 1fr; gap: 56px; border-radius: var(--radius); }
+.homeHero h1 { color: #f5f9f7; font-size: clamp(42px, 4.9vw, 65px); line-height: 1.05; margin: 22px 0 26px; }
+.homeHero .kicker { color: #a4c5bf; }
+.homeHero .lede { color: #cedbd9; max-width: 44ch; }
+.homeHero .btnPrimary { background: #d9eece; color: #142831; border-color: #d9eece; font-size: 14px; }
+.homeHero .btnPrimary:hover { background: #c8e0bb; }
+.heroTextLink { display: inline-flex; align-items: center; gap: 18px; font-size: 13px; color: #eef4f2; padding: 10px 0; }
+.heroAside { align-self: center; border-left: 1px solid #3b565b; padding-left: 30px; }
+.heroAsideTitle { color: #a4c5bf; font-size: 12px; margin-bottom: 22px; }
+.heroAside > div { display: flex; gap: 18px; padding: 17px 0; border-top: 1px solid #3b565b; }
+.heroAside .index { font-size: 11px; color: #a4c5bf; padding-top: 5px; }
+.heroAside p:not(.heroAsideTitle) { font-size: 18px; line-height: 1.4; color: #f5f9f7; margin: 0; }
+.heroAside small { display: block; color: #bdcccf; font-size: 13px; margin-top: 7px; line-height: 1.6; }
+.homeSection { padding: 72px 4px; }
+.sectionIntro { margin-bottom: 32px; max-width: 700px; }
+.sectionIntro .kicker, .homeContact .kicker, .workSection .kicker { color: var(--accent); }
+.serviceGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.servicePanel { border: 1px solid var(--rule); background: white; padding: 34px; display: flex; flex-direction: column; align-items: flex-start; }
+.clinicalPanel { border-top: 3px solid var(--accent); padding-top: 32px; }
+.servicePanel h3 { font-size: 28px; }
+.servicePanel .list { margin: 8px 0 28px; font-size: 14px; }
+.servicePanel .textLink { margin-top: auto; }
+.workSection { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; padding: 56px 4px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); align-items: center; }
+.workSection > div > p:last-child { max-width: 47ch; }
+.projectFeature { background: #e7eeea; padding: 36px; border-radius: var(--radius); }
+.projectType { font-size: 11px; color: var(--accent); margin-bottom: 24px; text-transform: uppercase; letter-spacing: .07em; }
+.projectFeature h3 { font-size: 29px; max-width: 20ch; }
+.projectFeature .textLink { margin-top: 16px; }
+.processGrid { display: grid; grid-template-columns: repeat(3, 1fr); list-style: none; margin: 40px 0 0; padding: 0; gap: 36px; }
+.processGrid li { border-top: 1px solid var(--rule-strong); padding-top: 20px; }
+.stepNumber { display: block; font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 22px; font-weight: 650; }
+.processGrid h3 { font-size: 22px; }
+.processGrid p { font-size: 15px; margin-bottom: 0; }
+.homeContact { background: #e7eeea; padding: 44px; display: flex; gap: 40px; justify-content: space-between; align-items: center; border-radius: var(--radius); }
+.homeContact > div { max-width: 610px; }
+.contactNote { font-size: 13px; border-left: 1px solid var(--rule-strong); padding-left: 28px; flex-shrink: 0; }
+.contactDetails { column-gap: 20px; overflow-wrap: anywhere; }
+.formGrid { min-width: 0; }
+.field input, .field select, .field textarea { min-width: 0; }
+@media(max-width: 900px) { .homeHero { padding: 44px 32px; gap: 28px; grid-template-columns: 1.5fr 1fr; } .homeHero h1 { font-size: 49px; } .heroAside { padding-left: 22px; } .workSection { gap: 36px; } .homeContact { align-items: flex-start; } .contactNote { display: none; } }
+@media(max-width: 650px) { .content { padding: 20px 18px 44px; } .container { padding: 28px 20px; } .homeHero { grid-template-columns: 1fr; padding: 34px 24px; gap: 34px; } .homeHero h1 { font-size: clamp(36px, 9vw, 49px); } .homeHero .lede { font-size: 17px; } .heroAside { border-left: none; padding-left: 0; } .heroAsideTitle { margin-bottom: 12px; } .heroAside > div { padding: 13px 0; } .heroAside p:not(.heroAsideTitle) { font-size: 16px; } .homeSection { padding: 46px 2px; } .serviceGrid, .workSection, .processGrid { grid-template-columns: 1fr; } .servicePanel { padding: 27px; } .clinicalPanel { padding-top: 25px; } .workSection { gap: 20px; padding: 38px 2px; } .projectFeature { padding: 28px; } .processGrid { gap: 28px; margin-top: 28px; } .stepNumber { margin-bottom: 14px; } .homeContact { padding: 30px 24px; } .btnRow { gap: 16px; } .formGrid, .featureGrid { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr; } .breadcrumbs { flex-wrap: wrap; } }
+@media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

@@ -3,6 +3,7 @@ import { siteConfig } from '@/lib/site';
 const serviceOptions = [
   'Request a demo website',
   'Website redesign',
+  'Business automation',
   'Practice management software',
   'Chiropractic software',
   'Hosting or SEO support',
@@ -12,11 +13,10 @@ const serviceOptions = [
 export function ContactIntakeForm() {
   return (
     <section>
-      <div className="kicker">Project Intake</div>
+      <div className="kicker">Start a conversation</div>
       <h2>Tell us what you need.</h2>
       <p>
-        Fill out the intake form and Ordinis will review your goals, current setup, and timeline
-        before following up.
+        A few details help us understand your project and the next step you have in mind.
       </p>
 
       <form
@@ -99,18 +99,17 @@ export function ContactIntakeForm() {
         </label>
 
         <label className="field">
-          <span>Project details</span>
+          <span>Anything else? (optional)</span>
           <textarea
             name="message"
-            rows={6}
-            required
+            rows={4}
             placeholder="Share the context, pain points, and anything else we should know."
           />
         </label>
 
         <div className="btnRow">
           <button className="btn btnPrimary" type="submit">
-            Submit Intake
+            Send inquiry
           </button>
         </div>
         <p className="small">

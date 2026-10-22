@@ -36,6 +36,9 @@ export default function IntegrativeHealthSolutionsCaseStudyPage() {
         patients a clearer path to take action. Ordinis rebuilt the platform around cleaner page
         structure, stronger technical SEO, and conversion-focused content.
       </p>
+      <div className="btnRow">
+        <a className="btn btnPrimary" href="https://www.bestflorencechiropractor.com/" target="_blank" rel="noopener noreferrer" aria-label="View live IHS website (opens in a new tab)">View live website <span aria-hidden="true">↗</span></a>
+      </div>
 
       <section>
         <h2>The challenge</h2>
