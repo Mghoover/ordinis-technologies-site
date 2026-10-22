@@ -7,9 +7,11 @@ export const siteConfig = {
   location: 'Florence, South Carolina',
   phone: '854-204-7395',
   phoneHref: 'tel:8542047395',
-  email: 'info@ordinistechnologies.com',
-  emailHref: 'mailto:info@ordinistechnologies.com',
-  formAction: 'https://formsubmit.co/info@ordinistechnologies.com',
+  email: 'matt@ordinistechnologies.com',
+  emailHref: 'mailto:matt@ordinistechnologies.com',
+  formAction: 'https://formsubmit.co/matt@ordinistechnologies.com',
+  facebookUrl: 'https://www.facebook.com/profile.php?id=61595108567166',
+  linkedinUrl: 'https://www.linkedin.com/company/ordinis-technologies-llc/',
   contactThankYouPath: '/contact/thank-you/',
 } as const;
 
